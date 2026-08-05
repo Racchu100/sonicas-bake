@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-playfair: 'Playfair Display', serif;
+    --font-poppins: 'Poppins', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FFF8F9;
+    color: #1E0A12;
+    font-family: var(--font-poppins);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair);
+  }
+}
+
+/* Glassmorphism Utilities */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 214, 230, 0.5);
+  box-shadow: 0 10px 30px 0 rgba(139, 30, 63, 0.05);
+}
+
+.glass-nav {
+  background: rgba(255, 248, 249, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.glass-gold-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(253, 240, 246, 0.8));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 12px 36px rgba(139, 30, 63, 0.08);
+}
+
+/* Shimmer & Gold Effects */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #997A15 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.burgundy-gradient-text {
+  background: linear-gradient(135deg, #8B1E3F 0%, #5E1129 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-btn {
+  background: linear-gradient(135deg, #D4AF37 0%, #B89028 100%);
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.gold-btn:hover {
+  background: linear-gradient(135deg, #E5BE48 0%, #C9A139 100%);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+  transform: translateY(-2px);
+}
+
+.burgundy-btn {
+  background: linear-gradient(135deg, #8B1E3F 0%, #5E1129 100%);
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 30, 63, 0.25);
+}
+
+.burgundy-btn:hover {
+  background: linear-gradient(135deg, #A82952 0%, #751835 100%);
+  box-shadow: 0 6px 20px rgba(139, 30, 63, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF8F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B1E3F;
+}
