@@ -59,10 +59,10 @@ export function Navbar() {
           <Image
             src="/brand-logo.png"
             alt="Sonicas Bake Luxury Patisserie Logo"
-            width={240}
-            height={80}
+            width={350}
+            height={120}
             priority
-            className="h-9 sm:h-11 md:h-12 w-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300"
+            className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300"
           />
         </Link>
 
