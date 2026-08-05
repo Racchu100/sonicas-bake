@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -53,14 +54,16 @@ export function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Logo - Pure Typography */}
-        <Link href="/" className="flex flex-col group">
-          <span className="font-playfair text-base sm:text-lg md:text-xl font-bold tracking-wider text-brand-burgundy group-hover:text-brand-burgundyLight transition-colors leading-tight">
-            SONICAS BAKE
-          </span>
-          <span className="text-[7.5px] sm:text-[8.5px] tracking-[0.22em] font-poppins uppercase text-brand-gold font-semibold">
-            LUXURY PATISSERIE
-          </span>
+        {/* Brand Logo - Official 3D Calligraphy Emblem */}
+        <Link href="/" className="flex items-center group">
+          <Image
+            src="/brand-logo.png"
+            alt="Sonicas Bake Luxury Patisserie Logo"
+            width={240}
+            height={80}
+            priority
+            className="h-9 sm:h-11 md:h-12 w-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300"
+          />
         </Link>
 
         {/* Desktop Navigation Links */}
